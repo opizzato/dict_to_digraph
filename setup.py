@@ -7,7 +7,7 @@ requirements = []
 
 setup(
     name="dict_to_digraph",
-    version="0.0.1",
+    version="0.0.3",
     author="Olivier Pizzato",
     author_email="olivier.pizzato@gmail.com",
     description="Turn python dictionary into Graphviz digraph",
@@ -18,6 +18,6 @@ setup(
     install_requires=requirements,
     classifiers=[
         "Programming Language :: Python :: 3.8",
-        "License :: OSI Approved :: MIT",
+        "License :: OSI Approved :: MIT License",
     ],
 )

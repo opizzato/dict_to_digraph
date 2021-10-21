@@ -1,6 +1,11 @@
-from dict_to_digraph.dict_to_digraph import *
+from dict_to_digraph import *
 import pytest
 
+
+def test_empty():
+
+    assert dict_to_digraph({}, {}).source == 'digraph {\n}'
+    assert dict_to_digraph({'a': {'b': 'c'}}, {'edges': ['a']}).source == 'digraph {\n}'
 
 @pytest.fixture
 def params():

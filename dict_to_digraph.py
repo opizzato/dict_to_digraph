@@ -34,7 +34,7 @@ def text_to_label(text, params):
 def node_to_attr(node, params):
 
     attr = {}
-    for regexp, a in params['node_attrs']:
+    for regexp, a in params.get('node_attrs', []):
         if re.match(regexp, node):
             attr.update(a)
 
@@ -45,7 +45,7 @@ def key_value_to_sources(k, v, params):
 
     sources = []
 
-    for fk in params['edge_keys']:
+    for fk in params.get('edge_keys', []):
 
         if isinstance(fk, str):
             if re.match(fk, k):
